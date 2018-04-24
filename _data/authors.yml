@@ -1,0 +1,33 @@
+# Authors
+
+SchoSpec:
+  name          : "SchoSpec"
+  picture       : "/assets/images/Logo.png"
+  url           : "https://schottkyspectroscopyimp.github.io/"
+  email         : ""
+  bio           : ""
+  post_meta_bio : "A fun place for Schottky guys!"
+  cta           : "Follow"
+  cta_url       : "https://github.com/SchottkySpectroscopyIMP"
+
+NanaVan:
+  name          : "NanaVan"
+  picture       : "/assets/images/BigHead.png"
+  url           : "https://nanavan.github.io/"
+  email         : "wangqian2016@impcas.ac.cn"
+  bio           : "Mathemtica & Python lover"
+  post_meta_bio : "Give me a hadron, I'll be strong."
+  cta           : "Follow"
+  cta_url       : "https://github.com/NanaVan"
+  facebook      : "Van Wang"
+
+nerdull:
+  name          : "nerdull"
+  picture       : "/assets/images/cxc.png"
+  url           : ""
+  email         : "cxc@impcas.ac.cn"
+  bio           : ""
+  post_meta_bio : ""
+  cta           : "Follow"
+  cta_url       : "https://github.com/nerdull"
+  facebook      : ""
