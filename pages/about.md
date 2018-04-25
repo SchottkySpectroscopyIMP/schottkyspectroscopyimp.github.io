@@ -25,7 +25,7 @@ PhD student <br/>
 <div>
 <img src="/assets/images/Logo.png" alt="schospec" height="100" width="100" style="vertical-align:middle;">
 &nbsp;&nbsp;&nbsp;&nbsp;
-<img src="/assets/images/IMP_Logo.png" alt="IMP" height="100" width="100" style="vertical-align:middle;">
+<img src="/assets/images/IMP_Logo.jpg" alt="IMP" height="100" width="100" style="vertical-align:middle;">
 &nbsp;&nbsp;&nbsp;&nbsp;
 <img src="/assets/images/CAS_Logo.png" alt="CAS" height="100" width="100" style="vertical-align:middle;">
 </div>
