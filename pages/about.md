@@ -18,7 +18,7 @@ Research Associate
 &nbsp;&nbsp;
 [<b>NanaVan</b>][nanavan_website] <br/>
 E-mail: wangqian2016@impcas.ac.cn <br/>
-PhD student <br/>
+PhD Student <br/>
 
 
 ## Contact us
