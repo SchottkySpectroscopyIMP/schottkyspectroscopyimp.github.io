@@ -7,8 +7,8 @@ navigation:
   - title: Project
     url: /project/
 
-  - title: Themes
-    url: https://desiredpersona.com/themes/
+  - title: Archives
+    url: /archive/
 
   - title: About
     url: /about/
@@ -21,9 +21,11 @@ navigation:
   - title: terms
     url: /terms/
 
+  - title: Themes
+    url: https://desiredpersona.com/themes/
 
   project:
-  - title: Project list
+  - title: Home for all projects
     url: /project/
     
   - title: Platform
@@ -32,6 +34,22 @@ navigation:
   - title: Tools
     url: /project/tools/
     
+  platform:
+  - title: Home for platform projects
+    url: /project/platform/
+  
+  - title: Data acquisition
+    url: /project/platform/data-acquisition/
+
+  - title: Data monitor
+    url: /project/platform/data-monitor/
+
+  tools:
+  - title: Home for tools
+    url: /project/tools/
+
+  - title: Ring experiment toolkit
+    url: /project/tools/ring-exp-toolkit/
 
 
 ################################

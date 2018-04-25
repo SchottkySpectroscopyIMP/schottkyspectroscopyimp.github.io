@@ -8,7 +8,16 @@
 <loc>http://localhost:5000/project/</loc>
 </url>
 <url>
+<loc>http://localhost:5000/project/platform/data-acquisition/</loc>
+</url>
+<url>
+<loc>http://localhost:5000/project/platform/data-monitor/</loc>
+</url>
+<url>
 <loc>http://localhost:5000/project/platform/</loc>
+</url>
+<url>
+<loc>http://localhost:5000/project/tools/ring-exp-toolkit/</loc>
 </url>
 <url>
 <loc>http://localhost:5000/project/tools/</loc>

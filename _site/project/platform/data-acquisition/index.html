@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Meta Robots Tag -->
+  <meta name="robots" content="all">
+
+  <!-- Site Author -->
+  <meta name="author" content="SchoSpec-IMP">
+
+  <!-- Atom Feed -->
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="SchoSpec Space Feed">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="/assets/css/minimal.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/favicon.png">
+
+  <!-- Analytics -->
+  
+
+  <!-- SEO -->
+  <!-- Begin Jekyll SEO tag v2.4.0 -->
+<title>Data acquisition system | SchoSpec Space</title>
+<meta name="generator" content="Jekyll v3.8.0" />
+<meta property="og:title" content="Data acquisition system" />
+<meta name="author" content="SchoSpec" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="A fun place for Schottky guys!" />
+<meta property="og:description" content="A fun place for Schottky guys!" />
+<link rel="canonical" href="http://localhost:5000/project/platform/data-acquisition/" />
+<meta property="og:url" content="http://localhost:5000/project/platform/data-acquisition/" />
+<meta property="og:site_name" content="SchoSpec Space" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-04-25T18:10:00+08:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@" />
+<meta name="twitter:creator" content="@SchoSpec" />
+<script type="application/ld+json">
+{"description":"A fun place for Schottky guys!","author":{"@type":"Person","name":"SchoSpec"},"@type":"BlogPosting","url":"http://localhost:5000/project/platform/data-acquisition/","headline":"Data acquisition system","dateModified":"2018-04-25T18:10:00+08:00","datePublished":"2018-04-25T18:10:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:5000/project/platform/data-acquisition/"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+<body class="black-80 ">
+
+
+
+<div class="flex-l justify-between items-center mw7 mw8-l w-100 center-l pt3 pb3 pl3 pr3-ns ph4-m">
+
+<a class="black-80 hover-black-80 link f2 f3-l fw4 mr3" href="http://localhost:5000/" title="Home">SchoSpec Space</a>
+
+
+  <div class="flex-l items-center mt3 mt0-l">
+    <nav class="nowrap overflow-x-auto">
+    
+      
+      <a href="http://localhost:5000/project/" class="black-80 hover-black-80 link f4 f5-l fw3 mr3 mt2" >Project</a>
+    
+      
+      <a href="http://localhost:5000/archive/" class="black-80 hover-black-80 link f4 f5-l fw3 mr3 mt2" >Archives</a>
+    
+      
+      <a href="http://localhost:5000/about/" class="black-80 hover-black-80 link f4 f5-l fw3 mr3 mt2" >About</a>
+    
+    </nav>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<main class="mw8 center flex flex-column flex-row-l justify-center">
+  <article class="mw7 center-l w-100 w-75-l ph3 ph4-ns">
+
+    
+    <header class="mt5">
+      <h1 class="f2 fw6 lh-title mb1">Data acquisition system</h1>
+      
+    </header>
+    
+
+    <div class="f5 f4-ns fw3 lh-copy mb0">
+    <p><a href="https://github.com/schottkyspectroscopyimp/data-acquisition" class="btn btn-outline--primary btn--small grow">code for data-acquisition</a></p>
+
+<p>For a Schottky resonator in the storage ring, the important measurement parameters of the beam are such as the revolution frequency, momentum spread of the ions, etc. Since these information is relative with the frequency domain. The data acquisition (DAQ) system of the resonator pays close attention to the frequency domain. A <code class="highlighter-rouge">spectrum analyzer</code> and an accompanied <code class="highlighter-rouge">storage hardware</code> is enough to form a simple DAQ system.</p>
+
+<p>However, the DAQ system of the resonator focuses more on the measurement itself. To help with the experiments, the necessary parameters for the setting of it are as follows.</p>
+<ul>
+  <li><code class="highlighter-rouge">center frequency</code>: cohered to the specific parameters of the resonator (have a notable effect on the magnification of the spectrum)</li>
+  <li><code class="highlighter-rouge">span</code>: the range of spectrum, which you will get</li>
+  <li><code class="highlighter-rouge">reference level</code>: decide the precision of the spectrum’s amplitude</li>
+  <li><code class="highlighter-rouge">duration</code>: the time of the collected data</li>
+</ul>
+
+<p>Moreover, to accomplish the phyisics experiment of the long-time measurement, a DAQ system of the resonator may also meet the following requirements.</p>
+<ul>
+  <li>stable and reliable long-time operation</li>
+  <li>able to remote control</li>
+  <li>uninterruptedly acquiring both large size and amount of data according to the setting</li>
+  <li>real-time feedback of the progress of the DAQ processing</li>
+</ul>
+
+<h2 id="hardware">Hardware</h2>
+
+<p><img src="https://github.com/SchottkySpectroscopyIMP/data-acquisition/blob/master/wiki-pic/DAQ-Hardware.png?raw=true" alt="Hardware" /></p>
+
+<p>The whole system is based on a <code class="highlighter-rouge">spectrum analyzer</code> (R&amp;S FSVR-7), an <code class="highlighter-rouge">IQR recorder</code> (R&amp;S IQR-100), an independent <code class="highlighter-rouge">trigger system</code> and the <code class="highlighter-rouge">server</code>.</p>
+
+<ul>
+  <li><a href="https://www.rohde-schwarz.com/us/product/fsvr-productstartpage_63493-11047.html"><code class="highlighter-rouge">spectrum analyzer</code></a>: digitizes the analog signal from the resonator, and filters it to the frequency range of interest</li>
+  <li><a href="https://www.rohde-schwarz.com/us/product/iqr-productstartpage_63493-11213.html"><code class="highlighter-rouge">IQ recorder</code></a>: packs the data flow into files and exports them to the server</li>
+  <li><a href="#trigger"><code class="highlighter-rouge">trigger system</code></a>: catch the trigger signal and sends a <em>triggered message</em> to the server</li>
+  <li><code class="highlighter-rouge">server</code>: control the whole system and stores the data files</li>
+</ul>
+
+<h3 id="trigger"> independent trigger system</h3>
+
+<p><a href="https://github.com/SchottkySpectroscopyIMP/ArduinoTriggerSystem" class="btn btn-outline--primary btn--small grow">code for trigger-system</a></p>
+
+<p><img src="https://github.com/SchottkySpectroscopyIMP/ArduinoTriggerSystem/blob/master/Pic/triggerSignal.png?raw=true" alt="triggerSignal" /></p>
+
+<p><img src="https://github.com/SchottkySpectroscopyIMP/ArduinoTriggerSystem/blob/master/Pic/Circuit.png?raw=true" alt="Circuit" /></p>
+
+<p><img src="https://github.com/SchottkySpectroscopyIMP/ArduinoTriggerSystem/blob/master/Pic/UnderTest_ArduinoYun.png?raw=true" alt="triggerSystem" /></p>
+
+<h2 id="software">Software</h2>
+
+<p>The software has two version, command-line interface (CLI) and graphical user interface (GUI).</p>
+
+<h3 id="CLI"> version 1. CLI</h3>
+
+<p>The first version was used in the beamtime of Dec. 2016 and Dec. 2017.</p>
+
+<p><a href="https://github.com/SchottkySpectroscopyIMP/data-acquisition/tree/cli-continuous" class="btn btn-outline--primary btn--small grow">code for data-acquisition-CLI</a></p>
+
+<p><img src="https://github.com/SchottkySpectroscopyIMP/data-acquisition/blob/master/wiki-pic/DAQ-Software_CLI.png?raw=true" alt="CLI" /></p>
+
+<p><img src="https://github.com/SchottkySpectroscopyIMP/data-acquisition/blob/master/wiki-pic/DAQ-Software_CLI_flow.png?raw=true" alt="CLIFlow" /></p>
+
+<h3 id="GUI">version 2. GUI</h3>
+
+<p>The second version has been used from the beamtime of Jan. 2018 until now.</p>
+
+<p><a href="https://github.com/schottkyspectroscopyimp/data-acquisition" class="btn btn-outline--primary btn--small grow">code for data-acquisition-GUI</a></p>
+
+<p><img src="https://github.com/SchottkySpectroscopyIMP/data-acquisition/blob/master/wiki-pic/DAQ-Software_GUI.png?raw=true" alt="GUI" /></p>
+
+<p><img src="https://github.com/SchottkySpectroscopyIMP/data-acquisition/blob/master/wiki-pic/DAQ-Software_GUI_flow.png?raw=true" alt="GUIFlow" /></p>
+
+    </div>
+  </article>
+
+  
+    <aside class="pa3 ph4-m w-100 w-25-l">
+
+    
+    <h3>Platform</h3>
+      <ul class="pl0 list ttc">
+      
+        
+        <li><a href="http://localhost:5000/project/platform/" class="f5 fw3 lh-copy link underline-hover" >Home for platform projects</a></li>
+        
+        
+        <li><a href="http://localhost:5000/project/platform/data-acquisition/" class="f5 fw3 lh-copy link underline-hover" >Data acquisition</a></li>
+        
+        
+        <li><a href="http://localhost:5000/project/platform/data-monitor/" class="f5 fw3 lh-copy link underline-hover" >Data monitor</a></li>
+        
+      </ul>
+    
+
+  </aside>
+  
+</main>
+
+
+<footer class="flex justify-start items-baseline mw8 center w-100 ph3 ph4-ns mt4 mb2 lh-copy">
+  <nav class="flex flex-row flex-wrap">
+    <span class="f7 fw3 silver mr3 ttc"><a href="http://localhost:5000/" class="f7 fw5 silver hover-silver link underline-hover" title="SchoSpec Space">Schospec space</a> &copy; 2018</span>
+    
+    
+      
+      <a href="http://localhost:5000/privacy/" class="f7 fw3 silver hover-silver link underline-hover mr3" >Privacy</a>
+    
+      
+      <a href="http://localhost:5000/terms/" class="f7 fw3 silver hover-silver link underline-hover mr3" >Terms</a>
+    
+      
+      <a href="https://desiredpersona.com/themes/" class="f7 fw3 silver hover-silver link underline-hover mr3" target="_blank">Themes</a>
+    
+    
+
+    
+    <span class="f7 fw3 silver mr3">Designed with <a href="https://desiredpersona.com/themes/" class="f7 fw3 silver hover-silver link underline-hover mr3" target="_blank">Minimal Theme</a></span>
+    
+  </nav>
+</footer>
+
+
+
+</body>
+</html>
