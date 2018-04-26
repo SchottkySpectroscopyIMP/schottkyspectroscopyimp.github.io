@@ -11,7 +11,7 @@ author: SchoSpec
 post_meta: false
 permalink: /project/platform/data-monitor/
 ---
-[code for data-monitor](https://github.com/schottkyspectroscopyimp/data-monitor){: .btn .btn-outline-primary .btn--small .grow}
+[code for data-monitor](https://github.com/schottkyspectroscopyimp/data-monitor){: .btn .btn-outline--primary .btn--small .grow}
 
 After collecting the data from the Schottky resonator, we can not get any visual result from the raw data itself. The display of the acquired data in real time is of importance to monitor the experimental status, and help to adjust the machine parameters according to the condition whenever necessary. It allows for an splendid feedback to optimize the beam-time utillizing efficiency to the maximum.
 
