@@ -36,16 +36,33 @@ The whole system is based on a `spectrum analyzer` (R&S FSVR-7), an `IQR recorde
 * [`spectrum analyzer`](https://www.rohde-schwarz.com/us/product/fsvr-productstartpage_63493-11047.html): digitizes the analog signal from the resonator, and filters it to the frequency range of interest
 * [`IQ recorder`](https://www.rohde-schwarz.com/us/product/iqr-productstartpage_63493-11213.html): packs the data flow into files and exports them to the server
 * <a href="#trigger">`trigger system`</a>: catch the trigger signal and sends a *triggered message* to the server
-* `server`: control the whole system and stores the data files
+* `server`: control the whole system and stores the data files<br/>
+(`server`:* Linux-mint*)
 
 <h3 id="trigger"> independent trigger system</h3>
 
 [code for trigger-system](https://github.com/SchottkySpectroscopyIMP/ArduinoTriggerSystem){: .btn .btn-outline--primary .btn--small .grow}
 
-![triggerSignal](https://github.com/SchottkySpectroscopyIMP/ArduinoTriggerSystem/blob/master/Pic/triggerSignal.png?raw=true)
+The composition of our system except the trigger system are all the commercailly produced. Though the `IQ recorder` has its own trigger mode to start acquisition. It can only work stably for few discontinuously trigger, which fails to satisfy our demand. The home-made `trigger system` is got out the door.
 
-![Circuit](https://github.com/SchottkySpectroscopyIMP/ArduinoTriggerSystem/blob/master/Pic/Circuit.png?raw=true)
+<div>
+<img src="https://github.com/SchottkySpectroscopyIMP/ArduinoTriggerSystem/blob/master/Pic/triggerSignal.png?raw=true" alt="triggerSignal" height="240"  width="320" style="vertical-align:middle;">
+<img src="https://github.com/SchottkySpectroscopyIMP/ArduinoTriggerSystem/blob/master/Pic/Circuit.png?raw=true" alt="Circuit" height="240" width="320" style="vertical-align:middle;">
+</div>
 
+The trigger signal of CSRe injection is a TTL signal with a rapid falling edge from 4 V to 0 V. The width of it is 50 μs. Our goal is to catch the falling edge of the TTL signal and sending the *triggered* message to server, which can execute the `IQ recorder` to start acquiring. We chose an open-source microcontroller (Arduino Yun), which has a built-in Ethernet hub and supports Linux distribution, to realize the idea. 
+
+The circuit is to measure the voltage of the input TTL signal. Two identical resistors divide the applied voltage and a diode rectifies the current flow to protect the microcontroller.
+
+As for the software part, we have tried two plans to catch the falling edge.
+* <a href="https://github.com/SchottkySpectroscopyIMP/ArduinoTriggerSystem/#resetPrescaler">Resetting the prescaler</a> <br/>
+The first idea was used in the beamtime of 2016. It resets the prescaler of the ADC to reduce the time for sampling the signal. However, the resetting has a high risk of shortening life of the ADC.
+* <a href="https://github.com/SchottkySpectroscopyIMP/ArduinoTriggerSystem/#analogComparator">Using the analog comparator</a><br/>
+The second has been used since the beamtime of 2017. It uses the the analog comparator to quickly pop a separate interrupt if the TTL signal is lower than the Bandgap reference (1.1 V). It does a nice job!
+
+After getting the falling edge, the library `Process` of the `Arduino` will run the shell-command `netcat` to send the *triggered* message to the `server`.
+
+The `trigger system` under test:<br/>
 ![triggerSystem](https://github.com/SchottkySpectroscopyIMP/ArduinoTriggerSystem/blob/master/Pic/UnderTest_ArduinoYun.png?raw=true)
 
 ## Software
@@ -54,21 +71,31 @@ The software has two version, command-line interface (CLI) and graphical user in
 
 <h3 id="CLI"> version 1. CLI</h3>
 
-The first version was used in the beamtime of Dec. 2016 and Dec. 2017.
-
 [code for data-acquisition-CLI](https://github.com/SchottkySpectroscopyIMP/data-acquisition/tree/cli-continuous){: .btn .btn-outline--primary .btn--small .grow}
 
+The first version was used in the beamtime of Dec. 2016 and Dec. 2017.
+
+It is a simple and clear command-line interface. The users need to modify directly the source file to set acquisition parameters before launching the program. The progress of the processing devices is displayed in the interface. The key combination controls the system to pause, resume or terminate.
+
+The interface:<br/>
 ![CLI](https://github.com/SchottkySpectroscopyIMP/data-acquisition/blob/master/wiki-pic/DAQ-Software_CLI.png?raw=true)
 
+The flow of the process:<br/>
 ![CLIFlow](https://github.com/SchottkySpectroscopyIMP/data-acquisition/blob/master/wiki-pic/DAQ-Software_CLI_flow.png?raw=true)
 
 
 <h3 id="GUI">version 2. GUI</h3>
 
-The second version has been used from the beamtime of Jan. 2018 until now.
-
 [code for data-acquisition-GUI](https://github.com/schottkyspectroscopyimp/data-acquisition){: .btn .btn-outline--primary .btn--small .grow}
 
+The second version has been used from the beamtime of Jan. 2018 until now.
+
+It is a user-friendly and effective graphical interface. After the physical connection and network driver deploy, the user can simply lanuch the program and control the system easily. All required parameters can be changed on the interface. Also several collecting modes and trigger modes are selectable.
+
+The interface uses two threads. One is for the interface display and elements' update. The other is for the processing devices' work. The signal-slot mechanism helps the connection between two threads. By using the multithread, the probability of a hang or freeze will significantly reduce. Also the modular application facilitates troubleshooting and debuging.  
+
+The interface:<br/>
 ![GUI](https://github.com/SchottkySpectroscopyIMP/data-acquisition/blob/master/wiki-pic/DAQ-Software_GUI.png?raw=true)
 
+The flow of the process:<br/>
 ![GUIFlow](https://github.com/SchottkySpectroscopyIMP/data-acquisition/blob/master/wiki-pic/DAQ-Software_GUI_flow.png?raw=true)
