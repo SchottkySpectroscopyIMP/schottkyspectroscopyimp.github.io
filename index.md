@@ -9,4 +9,8 @@ header:
     layout: hero
     navigation: fancy
     class: bg-black
+    cta:
+        text: "View Our GitHub Profile"
+        url: "http://github.com/schottkyspectroscopyimp"
+        class: btn btn-outline--primary
 ---
