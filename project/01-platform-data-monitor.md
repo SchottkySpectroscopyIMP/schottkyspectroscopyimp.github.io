@@ -32,7 +32,7 @@ In our situation, a good data monitor may require as follows.
     It lists all the signal-slot functions for the interaction with users.
     The program imports `multithread.py` to deploy the interface displaying in the main thread and data processing in another thread.
     Also you need its accompanied `monitor.ui` to load the GUI elements.
-* [Processing the result from the data (more details in another project)]()
+* Processing the result from the data
     - `preprocessing.py`: to read the head file of the data and load the original data
     - `dpss.py`: a nice method to calculate *discrete prolate spheroidal sequeneces (DPSS)* for the signal processing
     - `processing.py`: several methods (e.g. various windows, [multitaper](https://en.wikipedia.org/wiki/Multitaper)) for signal processing (both 1D and 2D)
