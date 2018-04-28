@@ -8,9 +8,10 @@ paragraph: A fun place for Schottky guys!
 header:
     layout: hero
     navigation: fancy
+    image: "/assets/images/banner.png"
     class: bg-black
     cta:
         text: "View Our GitHub Profile"
         url: "http://github.com/schottkyspectroscopyimp"
-        class: btn btn-outline--primary
+        class: btn btn-outline--warning
 ---
