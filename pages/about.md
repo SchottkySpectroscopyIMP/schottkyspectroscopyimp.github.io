@@ -10,7 +10,7 @@ This is the [Github pages][group_website] of Schottky Spectroscopy Group @CSRe i
 
 <img src="/assets/images/cxc.png" alt="cxc" height="80" width="80" style="vertical-align:middle;">
 &nbsp;&nbsp;
-<b>nerdull</b> <br/>
+[<b>nerdull</b>](https://github.com/nerdull) <br/>
 Email: cxc@impcas.ac.cn<br/>
 Research Associate
 
@@ -20,7 +20,21 @@ Research Associate
 E-mail: wangqian2016@impcas.ac.cn <br/>
 PhD Student <br/>
 
+## Links
 
+Other Schottky guys from our collaboration group also provide some excellent projects online. Click if you are interested. 
+
+### guys from [GSI-ASTRUm](https://www.gsi.de/astrum)
+
+<div>
+<img src="https://avatars1.githubusercontent.com/u/7139148?s=400&v=4" alt="shahab" height="60" width="60" style="vertical-align:middle;">
+&nbsp;&nbsp;
+<a href="https://github.com/xaratustrah"><b>xaratustrah</b></a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="https://avatars3.githubusercontent.com/u/31344023?s=400&v=4" alt="dima" height="60" width="60" style="vertical-align:middle;">
+&nbsp;&nbsp;
+<a href="https://github.com/Dmytriie"><b>Dmytriie</b></a>
+</div>
 ## Contact us
 <div>
 <img src="/assets/images/Logo.png" alt="schospec" height="100" width="100" style="vertical-align:middle;">
