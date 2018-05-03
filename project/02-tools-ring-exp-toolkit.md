@@ -96,5 +96,5 @@ Weight    Ion      Half-life   Yield     Rev.Freq. PeakLoc. Harmonic
 ## Notice
 
 Interesting?<br/>
-Go and enjoy a scientific journey with our [freshman Alice (*beam calculator*)](https://github.com/SchottkySpectroscopyIMP/ring-exp-toolkit/wiki/Beam-Physics-Calculator){: .red .hover-orange} and [summer school student Bob](https://github.com/SchottkySpectroscopyIMP/ring-exp-toolkit/wiki/Ion-Identification){: .red .hover-blue} to learn more~ :)
+Go and enjoy a scientific journey with our [freshman Alice (*beam calculator*)](https://github.com/SchottkySpectroscopyIMP/ring-exp-toolkit/wiki/Beam-Physics-Calculator){: .red .hover-blue} and [summer school student Bob (*ion identification*)](https://github.com/SchottkySpectroscopyIMP/ring-exp-toolkit/wiki/Ion-Identification){: .red .hover-blue} to learn more~ :)
 
