@@ -26,7 +26,7 @@ We also build a GUI as usual to get the user interaction easier and more intuiti
 
 See the magic!
 
-<iframe src="https://onedrive.live.com/embed?cid=64BDB670E3C9499C&resid=64BDB670E3C9499C%214839&authkey=AH9y7urLtDRnc94" width="320" height="180" frameborder="0" scrolling="no" allowfullscreen></iframe>
+<iframe src='https://onedrive.live.com/embed?cid=64BDB670E3C9499C&resid=64BDB670E3C9499C%214840&authkey=ACuGPrTOyhfP5OY&em=2&wdAr=1.7777777777777776' width='350px' height='221px' frameborder='0'>这是嵌入 <a target='_blank' href='https://office.com'>Microsoft Office</a> 演示文稿，由 <a target='_blank' href='https://office.com/webapps'>Office Online</a> 支持。</iframe>
 
 You can find more at our [`/Project/platform/data-acquisition/`]({{ "/project/platform/data-acquisition/" | relative_url }}). If you have some suggestions, don't hesitate to comment us.
 
