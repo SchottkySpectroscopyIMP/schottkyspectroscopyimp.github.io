@@ -26,9 +26,7 @@ We also build a GUI as usual to get the user interaction easier and more intuiti
 
 See the magic!
 
-<div class="aspect-ratio aspect-ratio--16x9 w-100 mb4">
 <iframe src="https://onedrive.live.com/embed?cid=64BDB670E3C9499C&resid=64BDB670E3C9499C%214839&authkey=AH9y7urLtDRnc94" width="320" height="180" frameborder="0" scrolling="no" allowfullscreen></iframe>
-</div>
 
 You can find more at our [`/Project/platform/data-acquisition/`]({{ "/project/platform/data-acquisition/" | relative_url }}). If you have some suggestions, don't hesitate to comment us.
 
