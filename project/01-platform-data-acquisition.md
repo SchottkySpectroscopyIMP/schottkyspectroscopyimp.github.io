@@ -93,7 +93,7 @@ Debug mode (only shown when pressing the key combination `ctrl-h`. pressing the 
 
 <div>
 <img src="https://raw.githubusercontent.com/SchottkySpectroscopyIMP/remote-buttonpusher/master/wiki-pic/NormalMode.png" alt="normalMode" height="240"  width="320" style="vertical-align:middle;">
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;
 <img src="https://raw.githubusercontent.com/SchottkySpectroscopyIMP/remote-buttonpusher/master/wiki-pic/HiddenMode.png" alt="debugMode" height="240" width="320" style="vertical-align:middle;">
 </div>
 
