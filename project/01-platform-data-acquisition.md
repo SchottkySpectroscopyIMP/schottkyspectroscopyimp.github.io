@@ -19,7 +19,10 @@ However, the DAQ system of the resonator focuses more on the measurement itself.
 * `center frequency`: cohered to the specific parameters of the resonator (have a notable effect on the magnification of the spectrum)
 * `span`: the range of spectrum, which you will get
 * `reference level`: decide the precision of the spectrum's amplitude
-* `duration`: the time of the collected data
+* `duration`: the time of the collected data <br/>
+   (*auto trigger mode*) starting collection from the time when the system catches the trigger signal to the end of duration. **No response to other trigger signal during the collection of one file.** <br/>
+   (*manual trigger mode*) starting collection when pressing the `play` button to the end of duration. <br>
+    The IQ recorder takes 10 MByte (2621440 IQ samples) as the minimum storage unit. **The duration is a approximate number** according the calculation of the IQ samples with the input duration.
 
 Moreover, to accomplish the phyisics experiment of the long-time measurement, a DAQ system of the resonator may also meet the following requirements.
 * stable and reliable long-time operation
@@ -37,7 +40,7 @@ The whole system is based on a `spectrum analyzer` (R&S FSVR-7), an `IQR recorde
 * [`IQ recorder`](https://www.rohde-schwarz.com/us/product/iqr-productstartpage_63493-11213.html): packs the data flow into files and exports them to the server
 * <a href="#trigger">`trigger system`</a>: catch the trigger signal and sends a *triggered message* to the server
 * `server`: control the whole system and stores the data files<br/>
-(`server`:* Linux-mint*)
+(`server`: *Linux-mint*)
 
 <h3 id="trigger"> independent trigger system</h3>
 
@@ -62,8 +65,45 @@ The second has been used since the beamtime of 2017. It uses the the analog comp
 
 After getting the falling edge, the library `Process` of the `Arduino` will run the shell-command `netcat` to send the *triggered* message to the `server`.
 
-The `trigger system` under test:<br/>
-![triggerSystem](https://github.com/SchottkySpectroscopyIMP/ArduinoTriggerSystem/blob/master/Pic/UnderTest_ArduinoYun.png?raw=true)
+The `trigger system` with its box (applied to use in 2018):<br/>
+![triggerSystem](https://github.com/SchottkySpectroscopyIMP/ArduinoTriggerSystem/blob/master/Pic/UnderTest_ArduinoYun.JPG?raw=true)
+
+<h3 id="buttonPusher">remote-controllable button pusher for IQ recorder</h3>
+
+[code for remote-buttonpusher](https://github.com/SchottkySpectroscopyIMP/remote-buttonpusher){: .btn .btn-outline--primary .btn--small .grow}
+
+From the result of thousands of off-line test, unstable original operating system (OS) of the `IQ recorder` is always the weak part of the whole system. Since the experiment platform is far from the control server, we design a special button pusher in case of the IQ recorder's blue screen of death (BSOD). 
+
+The mechanism of the button pusher is the [**cam**](https://en.wikipedia.org/wiki/Cam), which transforms the rotational motion of eccentric wheel to the linear reciprocal motion of push rod. <br/>
+For the control hardware devices, we choose the `raspberry pi`, a `ULN 2003` board for step driver control, a power supply (12V/1.5A) to provide enough electric power to the step motor.<br/>
+Last is about the software of communication via network and the remote driver. A autorun program for the step motor driver control as well as the server to listen to the command from the remote main server is uploaded into the `raspberry pi`. A corrsponding client to send the command via the network is established in the remote main server. We send the commands from the main server to the `raspberry pi`, then the pusher will start to work as we wish.
+
+<div>
+<img src="https://raw.githubusercontent.com/SchottkySpectroscopyIMP/remote-buttonpusher/master/wiki-pic/buttonPusher.gif" alt="camStep" height="320" width="200" style="vertical-align:middle;">
+&nbsp;&nbsp;&nbsp;
+<img src="https://raw.githubusercontent.com/SchottkySpectroscopyIMP/remote-buttonpusher/master/wiki-pic/buttonPusher_bb.png" alt="bb" height="240"  width="420" style="vertical-align:middle;">
+</div>
+
+To get the user operation easiler and convenient, a GUI with two mode is built. <br/>
+Normal mode (always shown, but disabled when the debug mode is selected)
+- short press: use for normally shutdowning or booting the IQ recorder
+- long press: use for BSOD (waiting for more time than the short press when the pusher touch the button)
+Debug mode (only shown when pressing the key combination `ctrl-h`. pressing the combination again this mode is hidden again)
+- free mode: use for calibrating the position of the push rod's starting point 
+
+<div>
+<img src="https://raw.githubusercontent.com/SchottkySpectroscopyIMP/remote-buttonpusher/master/wiki-pic/NormalMode.png" alt="normalMode" height="240"  width="320" style="vertical-align:middle;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="https://raw.githubusercontent.com/SchottkySpectroscopyIMP/remote-buttonpusher/master/wiki-pic/HiddenMode.png" alt="debugMode" height="240" width="320" style="vertical-align:middle;">
+</div>
+
+The detailed usage of the button pusher can be referenced from the repo's [README](https://github.com/SchottkySpectroscopyIMP/remote-buttonpusher/#pusher). The design details can be seen from the repo's [Wiki](https://github.com/SchottkySpectroscopyIMP/remote-buttonpusher/wiki/Mini-Button-Pusher)
+
+The video of using the short press to turn off the of the IQ recorder
+
+<div class="aspect-ratio aspect-ratio--16x9 w-100 mb4">
+<iframe src="https://onedrive.live.com/embed?cid=64BDB670E3C9499C&resid=64BDB670E3C9499C%214839&authkey=AH9y7urLtDRnc94" width="320" height="180" frameborder="0" scrolling="no" allowfullscreen></iframe>
+</div>
 
 ## Software
 
@@ -93,6 +133,8 @@ The second version has been used from the beamtime of Jan. 2018 until now.
 It is a user-friendly and effective graphical interface. After the physical connection and network driver deploy, the user can simply lanuch the program and control the system easily. All required parameters can be changed on the interface. Also several collecting modes and trigger modes are selectable.
 
 The interface uses two threads. One is for the interface display and elements' update. The other is for the processing devices' work. The signal-slot mechanism helps the connection between two threads. By using the multithread, the probability of a hang or freeze will significantly reduce. Also the modular application facilitates troubleshooting and debuging.  
+
+The detailed usage of the GUI can be referenced from the repo's [README](https://github.com/SchottkySpectroscopyIMP/data-acquisition/#DAQGUI).
 
 The interface:<br/>
 ![GUI](https://github.com/SchottkySpectroscopyIMP/data-acquisition/blob/master/wiki-pic/DAQ-Software_GUI.png?raw=true)
