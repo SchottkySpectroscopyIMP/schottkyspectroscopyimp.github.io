@@ -101,7 +101,7 @@ The detailed usage of the button pusher can be referenced from the repo's [READM
 
 The video of using the short press to turn off the of the IQ recorder
 
-<iframe src='https://onedrive.live.com/embed?cid=64BDB670E3C9499C&resid=64BDB670E3C9499C%214840&authkey=ACuGPrTOyhfP5OY&em=2&wdAr=1.7777777777777776' width='610px' height='367px' frameborder='0'>这是嵌入 <a target='_blank' href='https://office.com'>Microsoft Office</a> 演示文稿，由 <a target='_blank' href='https://office.com/webapps'>Office Online</a> 支持。</iframe>
+<div style="width:100%;height:0px;position:relative;padding-bottom:56.250%;"><iframe src="https://streamable.com/s/l7azu/outkid" frameborder="0" width="100%" height="100%" allowfullscreen style="width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;"></iframe></div>
 
 ## Software
 
