@@ -151,7 +151,7 @@ The first idea was used in the beamtime of 2016. It resets the prescaler of the 
 The second has been used since the beamtime of 2017. It uses the the analog comparator to quickly pop a separate interrupt if the TTL signal is lower than the Bandgap reference (1.1 V). It does a nice job!</li>
 </ul>
 
-<p>After getting the falling edge, the library <code class="highlighter-rouge">Process</code> of the <code class="highlighter-rouge">Arduino</code> will run the shell-command <code class="highlighter-rouge">netcat</code> to send the <em>triggered</em> message to the <code class="highlighter-rouge">server</code>.</p>
+<p>After getting the falling edge of the TTL signal (the rising edge of <em>Analog Comparator Output</em>), the library <code class="highlighter-rouge">Process</code> of the <code class="highlighter-rouge">Arduino</code> will run the shell-command <code class="highlighter-rouge">netcat</code> to send the <em>triggered</em> message to the <code class="highlighter-rouge">server</code>.</p>
 
 <p>The <code class="highlighter-rouge">trigger system</code> with its box (applied to use in 2018):<br />
 <img src="https://github.com/SchottkySpectroscopyIMP/ArduinoTriggerSystem/blob/master/Pic/UnderTest_ArduinoYun.JPG?raw=true" alt="triggerSystem" /></p>
@@ -183,7 +183,7 @@ Debug mode (only shown when pressing the key combination <code class="highlighte
 
 <div>
 <img src="https://raw.githubusercontent.com/SchottkySpectroscopyIMP/remote-buttonpusher/master/wiki-pic/NormalMode.png" alt="normalMode" height="240" width="320" style="vertical-align:middle;" />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;
 <img src="https://raw.githubusercontent.com/SchottkySpectroscopyIMP/remote-buttonpusher/master/wiki-pic/HiddenMode.png" alt="debugMode" height="240" width="320" style="vertical-align:middle;" />
 </div>
 
@@ -191,9 +191,7 @@ Debug mode (only shown when pressing the key combination <code class="highlighte
 
 <p>The video of using the short press to turn off the of the IQ recorder</p>
 
-<div class="aspect-ratio aspect-ratio--16x9 w-100 mb4">
-<iframe src="https://onedrive.live.com/embed?cid=64BDB670E3C9499C&amp;resid=64BDB670E3C9499C%214839&amp;authkey=AH9y7urLtDRnc94" width="320" height="180" frameborder="0" scrolling="no" allowfullscreen=""></iframe>
-</div>
+<div style="width:100%;height:0px;position:relative;padding-bottom:56.250%;"><iframe src="https://streamable.com/s/l7azu/outkid" frameborder="0" width="100%" height="100%" allowfullscreen="" style="width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;"></iframe></div>
 
 <h2 id="software">Software</h2>
 

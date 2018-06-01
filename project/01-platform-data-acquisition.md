@@ -63,7 +63,7 @@ The first idea was used in the beamtime of 2016. It resets the prescaler of the 
 * <a href="https://github.com/SchottkySpectroscopyIMP/ArduinoTriggerSystem/#analogComparator">Using the analog comparator</a><br/>
 The second has been used since the beamtime of 2017. It uses the the analog comparator to quickly pop a separate interrupt if the TTL signal is lower than the Bandgap reference (1.1 V). It does a nice job!
 
-After getting the falling edge, the library `Process` of the `Arduino` will run the shell-command `netcat` to send the *triggered* message to the `server`.
+After getting the falling edge of the TTL signal (the rising edge of *Analog Comparator Output*), the library `Process` of the `Arduino` will run the shell-command `netcat` to send the *triggered* message to the `server`.
 
 The `trigger system` with its box (applied to use in 2018):<br/>
 ![triggerSystem](https://github.com/SchottkySpectroscopyIMP/ArduinoTriggerSystem/blob/master/Pic/UnderTest_ArduinoYun.JPG?raw=true)
