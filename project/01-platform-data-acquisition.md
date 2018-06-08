@@ -86,10 +86,11 @@ Last is about the software of communication via network and the remote driver. A
 
 To get the user operation easiler and convenient, a GUI with two mode is built. <br/>
 Normal mode (always shown, but disabled when the debug mode is selected)
-- short press: use for normally shutdowning or booting the IQ recorder
-- long press: use for BSOD (waiting for more time than the short press when the pusher touch the button)
+- Turn on: use for booting the IQ recorder
+- Turn off: use for shutdowning the IQ recorder (the time halt on button is longer than booting the devices)
+
 Debug mode (only shown when pressing the key combination `ctrl-h`. pressing the combination again this mode is hidden again)
-- free mode: use for calibrating the position of the push rod's starting point 
+- step movement controller: use for calibrating the position of the push rod's starting point 
 
 <div>
 <img src="https://raw.githubusercontent.com/SchottkySpectroscopyIMP/remote-buttonpusher/master/wiki-pic/NormalMode.png" alt="normalMode" height="240"  width="320" style="vertical-align:middle;">
