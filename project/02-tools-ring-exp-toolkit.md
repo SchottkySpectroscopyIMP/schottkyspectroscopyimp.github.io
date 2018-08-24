@@ -18,7 +18,7 @@ During a heavy-ion experiment at storage ring, a specific calculator to estimate
 
 ## Code design
 
-The code are two scripts written in `Python 3`. Using a `IPython` or its optional `Jupter` notebook for interactive processing may be a perfect choice.
+The code includes two scripts written in `Python 3`. Using a `IPython` or its optional `Jupter` notebook for interactive processing may be a perfect choice.
 
 The functional scripts:
 
@@ -31,12 +31,12 @@ The functional scripts:
 
 ## Usage
 
-The first of all is to ensure the followings are installed.
+First of all is to ensure the followings are installed.
 
 * `Python3`
 * `Numpy`, `Pandas`, `IPython`/`Jupter` (*optional*)
 
-The next is for the required `.txt` files.
+Next is for the required `.txt` files.
 
 * `mass16.txt` - [atomic mass database](http://amdc.in2p3.fr/masstables/Ame2016/mass16.txt)
 * `nubase2016.txt` - [atomic half-life database](http://amdc.in2p3.fr/nubase/nubase2016.txt) 

@@ -22,4 +22,5 @@ The projects are as follows.
     - [Data monitor]({{ "/project/platform/data-monitor" | relative_url }}): an online monitor to real-time display the collected Schottky data
 * [Tools]({{ "/project/tools/" | relative_url }})
     - [Ring experiment toolkit]({{ "/project/tools/ring-exp-toolkit" | relative_url }}): a collection of tools for heavy-ion experiments at storage rings
+    - [Schottky data analysis]({{ "/project/tools/data-analysis" | relative_url }}): a library of analysis tools for Schottky data
 

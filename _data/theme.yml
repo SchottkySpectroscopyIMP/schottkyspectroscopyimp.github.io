@@ -51,6 +51,9 @@ navigation:
   - title: Ring experiment toolkit
     url: /project/tools/ring-exp-toolkit/
 
+  - title: Schottky data analysis
+    url: /project/tools/data-analysis/
+
 
 ################################
 # Attribution Link (Optional)
