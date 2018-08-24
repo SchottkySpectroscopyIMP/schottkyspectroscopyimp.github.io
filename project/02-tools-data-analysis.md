@@ -55,7 +55,7 @@ The functional scripts:
         - `plot_2d()`: 2d spectrogram
     - error analysis
         - `confidence_band()`: return the <b>confience band</b> of the spectral density esimation at a given confidence level. 
-* `DPSS.py`: generating <b>the Discrete Prolate Speroidal Sequenece</b> (<b>DPSS</b>), which is required for multitaper and adaptive multitaper methods.
+* `DPSS.py`: generating <b>the Discrete Prolate Speroidal Sequenece</b> (<b>DPSS</b>), which is required for multitaper and adaptive multitaper methods.([*details*](https://github.com/SchottkySpectroscopyIMP/data-analysis/DPSS){: .gray .hover-blue})
     - `gen_sequences()`, `plot_sequences()`: generating the DPSSs, and plotting them in the time domain, respectively.
     - `gen_spectra()`, `plot_spectra()`: Fourier transforming the DPSSs into the frequency domain, and plotting the result, respectively.
 
