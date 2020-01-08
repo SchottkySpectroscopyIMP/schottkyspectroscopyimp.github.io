@@ -51,4 +51,4 @@ Nanchang Rd. 509, Lanzhou 730000, P.R.China
 
 [group_website]:https://schottkyspectroscopyimp.github.io
 [inst_website]:http://english.imp.cas.cn
-[nanavan_website]:https://nanavan.github.io/GitBlog
+[nanavan_website]:https://nanavan.github.io/
