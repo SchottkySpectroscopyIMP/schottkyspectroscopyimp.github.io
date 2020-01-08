@@ -33,7 +33,7 @@ Other Schottky guys from our collaboration group also provide some excellent pro
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <img src="https://avatars3.githubusercontent.com/u/31344023?s=400&v=4" alt="dima" height="60" width="60" style="vertical-align:middle;">
 &nbsp;&nbsp;
-<a href="https://github.com/Dmytriie"><b>Dmytriie</b></a>
+<a href="https://github.com/Skyedragon"><b>Skyedragon</b></a>
 </div>
 ## Contact us
 <div>
