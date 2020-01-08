@@ -16,7 +16,7 @@ port        : 5000
 ################################
 # Theme Settings
 ################################
-remote_theme: desiredpersona/minimal-jekyll-theme
+remote_theme: NanaVan/minimal-jekyll-theme
 permalink   : /:title/
 
 collections:
