@@ -102,7 +102,7 @@ The detailed usage of the button pusher can be referenced from the repo's [READM
 
 The video of using the short press to turn off the of the IQ recorder
 
-<div style="width:100%;height:0px;position:relative;padding-bottom:56.250%;"><iframe src="https://streamable.com/s/l7azu/outkid" frameborder="0" width="100%" height="100%" allowfullscreen style="width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;"></iframe></div>
+<div style="width:100%;height:0px;position:relative;padding-bottom:56.250%;"><iframe src="https://onedrive.live.com/embed?cid=64BDB670E3C9499C&resid=64BDB670E3C9499C%214839&authkey=AH9y7urLtDRnc94" width="320" height="180" frameborder="0" scrolling="no" allowfullscreen></iframe></div>
 
 ## Software
 
